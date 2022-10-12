@@ -1,9 +1,14 @@
 {
   "compilerOptions": {
+    "module": "commonJS",
+    "moduleResolution": "node",
+    "incremental": true,
     "sourceMap": true,
     "outDir": "dist",
     "strict": true,
     "lib": ["esnext"],
+    "importHelpers": true,
     "esModuleInterop": true
-  }
+  },
+  "exclude":["node_modules"]
 }
