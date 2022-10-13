@@ -3,6 +3,6 @@ import { productRoutes } from "./product.routes";
 
 const routes = Router();
 
-routes.use('/', productRoutes)
+routes.use("/", productRoutes);
 
-export {routes};
+export { routes };
