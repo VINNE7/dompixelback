@@ -31,7 +31,13 @@ Para instalar o DomPixel CRUD backend, siga estas etapas:
 2 - utilizando o mysql workbench ou outra tecnologia, crie um schema em um servidor mysql e adicione a conexão em um arquivo .env na pasta raíz do projeto, com o seguinte modelo: " DATABASE_URL="mysql://root:root@localhost:3306/dompixel_crud" ",
 substituindo os dados conforme necessário.
 
-3 - Rode o servidor, buildando-o com o comando: `yarn build`
+3 - Rode o comando: yarn prisma generate. Para reestabelecer a conexão do prisma com o seu arquivo .env de variáveis ambientes. 
+
+4 - Rode a migration do prisma usando o comando: yarn prisma migrate dev.
+
+5 - Dê build no servidor com o comando: `yarn build`
+
+6 - Rode-o com o comando: node ./dist/server.js
 
 ## ☕ Usando DomPixel Crud backend
 
