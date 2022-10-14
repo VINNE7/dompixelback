@@ -1,13 +1,11 @@
+import { Request, Response } from "express";
 import { ShowProductByIdUseCase } from "./ShowProductByIdUseCase";
 
-import { Request, Response } from "express";
-
-export class ShowProductController {
+export class ShowProductByIdController {
   async handle(req: Request, res: Response) {
-    const { product_name, product_category, product_price } = req.body;
+    const showProductByIdUseCase = new ShowProductByIdUseCase();
 
-    const showProductUseCase = new ShowProductByIdUseCase();
-
+    const result = await showProductByIdUseCase.execute(req.params.id);
     return res.status(200).json(result);
   }
 }
